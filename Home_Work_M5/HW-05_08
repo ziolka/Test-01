@@ -1,0 +1,17 @@
+grades = {"A": 5, "B": 5, "C": 4, "D": 3, "E": 3, "FX": 2, "F": 1}
+
+
+def formatted_grades(students):
+    print(f'Students are: {students}')
+    result = []
+    i = 0
+    for k, v in students.items():
+        i += 1
+        grade = grades[str(v)]
+        table ='{:>4}|{:<10}|{:^5}|{:^5}'.format(i, k, v, grade)
+        print(table)
+        result.append(table)
+    print(result)
+    return result
+
+    

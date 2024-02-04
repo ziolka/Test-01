@@ -1,0 +1,11 @@
+def first(size, *args):
+    print(args)
+    sum = size + len(args)
+    return sum
+print(first(10, 'abc', 'bcd', 'cda'))
+
+def second(size, **kwargs):
+    print(kwargs)
+    sum = size + len(kwargs)
+    return sum
+print(second(20, xyz=1, XYZ=2, XXX=3))

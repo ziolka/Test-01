@@ -1,0 +1,9 @@
+def cost_delivery(quantity, *_, discount=0):
+    """Funkcja oblicza całkowity koszt dostawy.
+
+    Pierwszy parametr jest ilością zamówionych produktów.
+    Parametry po *są nieristotne. 
+    Parametry discount zawsze wymaga klucza i dlatego jest umieszczony po parametrze z*."""
+    
+    result = (5 + 2 * (quantity - 1)) * (1 - discount)
+    return result

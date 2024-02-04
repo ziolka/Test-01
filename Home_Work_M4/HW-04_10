@@ -1,0 +1,25 @@
+from random import randint
+
+
+def get_random_password():
+    password = []
+    for i in range(0,8):
+        random_num = randint(40, 126)
+        character = chr(random_num)
+        password.append(character)
+    
+    final_pass = ''
+    for j in password:
+        final_pass += str(j)
+
+    a = len(final_pass)
+    print(f'Pass lenghth is: {a}')
+    
+    if len(final_pass) == 8: 
+        return final_pass
+    else:
+        return None   
+
+print(get_random_password())
+        
+    

@@ -1,0 +1,12 @@
+my_data= {"a": 1, "b": 2, "c": 3, "d": 1, "e": 1}
+
+def lookup_key(data, value):
+    test_list = []
+    for k, v in data.items():
+        if v == value:
+            test_list.append(k)
+    return test_list
+
+print(lookup_key(my_data,1))
+            
+    

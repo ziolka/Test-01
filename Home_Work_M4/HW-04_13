@@ -1,0 +1,22 @@
+from pathlib import Path
+
+def parse_folder(path):
+    files = []
+    folders = []
+    # path = Path(path)
+    print(path)
+
+    
+    for i in path.iterdir():
+        if i.is_file():
+            files.append(i.name)
+            
+        if i.is_dir():
+            folders.append(i.name)
+            
+    print(files)
+    print(folders)
+            
+    return files, folders
+
+# print(parse_folder('D:/Python'))

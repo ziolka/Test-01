@@ -1,0 +1,15 @@
+def split_list(grade):
+    if not grade:
+        return ([], [])
+    average_note = int(sum(grade) / len(grade))
+    print(f'Average note is: {average_note}')
+    lower_notes = []
+    higher_notes = []
+    for note in grade:
+        if note <= average_note:
+            lower_notes.append(note)
+        else:
+            higher_notes.append(note)
+    return (lower_notes, higher_notes)
+          
+print(split_list([10,12,20,50]))

@@ -1,0 +1,11 @@
+def discount_price(price, discount):
+    price = price
+    def apply_discount():
+        nonlocal price
+        price = price * float(1 - discount)   
+        
+    apply_discount()
+    print(f"Price after discount is: {price}")
+    return price
+
+discount_price(100, 0.1)

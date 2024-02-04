@@ -1,0 +1,12 @@
+def cost_delivery(quantity, *args, discount=0):
+    cost = float((5 + (quantity - 1) * 2) * (1 - discount))
+    print(args)
+    return cost
+
+print(cost_delivery(2, 1, 2, 3))
+
+print(cost_delivery(3, 3))
+
+print(cost_delivery(1))
+
+print(cost_delivery(2, 1, 2, 3, discount=0.5))

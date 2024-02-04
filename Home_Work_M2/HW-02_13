@@ -1,0 +1,38 @@
+message = input("Enter a message: ")
+offset = int(input("Enter the offset: "))
+encoded_message = ""
+offset = offset % 26
+for ch in message:
+    pos = ord(ch)
+    if pos >= 65 and pos < 91 or pos >= 97 and pos < 123:
+        pos = ord(ch) + offset
+        if pos > 90 and pos <= 90 + offset or pos > 122 and pos <= 122 + offset:
+            pos = pos - 26
+    else:
+        pos = ord(ch)
+    new_char = chr(pos)
+    print(new_char)
+    encoded_message = encoded_message + new_char
+print(encoded_message)
+
+
+# Hello my little friends!' -> 'Spwwz xj wteewp qctpyod!' offset=11
+
+
+""" ord("a")  # 97
+chr(118)  # 'v'
+
+pos = ord('v') - ord('a')  # 21
+
+pos = ord('v') - ord('a')  # 21
+pos = (pos + 33) % 26  # 2
+
+pos = ord('v') - ord('a')  # 21
+pos = (pos + 33) % 26  # 2
+new_char = chr(pos + ord("a"))  # 'c' """
+
+
+# message = input("Enter a message: ")
+# offset = int(input("Enter the offset: "))
+# encoded_message = ""
+# for ch in message:  

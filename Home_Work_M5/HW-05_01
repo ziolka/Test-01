@@ -1,0 +1,9 @@
+import re
+
+def real_len(text):
+    formated_text = re.sub(r'(\n|\f|\r|\t|\v)', '',text)
+    print(text)
+    print(formated_text)
+    return len(formated_text)
+
+# print(real_len)  

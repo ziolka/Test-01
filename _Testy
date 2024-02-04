@@ -1,0 +1,109 @@
+import os
+import shutil
+import re
+
+def dir_operations():
+    os.chdir('D:\\Python\\Bałagan')
+    os.mkdir('pictures')
+    os.mkdir('movies')
+    os.mkdir('documents')
+    os.mkdir('music')
+    os.mkdir('archives')
+    os.mkdir('others')
+    # os.mkdirs('') - nested folders
+    # os.rmdir('')
+    # os.removedirs('') - nested folders
+    # os.rename('test.txt', 'example.txt') - rename
+    # os.path.isdir('path') - check if dir
+
+def file_list_creator(path):
+    files = os.listdir(os.getcwd())
+    print(files)
+
+    shutil.move(source, destination, copy_function = copy2)
+
+
+
+# for file in os.listdir():
+#     file_name, file_ext = os.path.splitext(file)
+#     print(file_name)
+#     print(file_ext)
+
+
+# for dirpath, dirnames, filenames in os.walk('D:\Python\Bałagan'):
+#     print(dirpath)
+#     print(dirnames)
+#     print(filenames)
+
+
+
+# os.chdir('D:\Python\Bałagan')
+# source_folder = os.getcwd()
+# print(source_folder)
+# pattern = "\*.txt"
+# files = os.listdir(source_folder)
+
+# for file in files:
+#     file_name = os.path.basename(file)
+#     print(file)
+#     if os.path.isfile(file_name):
+#         file_name, file_ext = os.path.splitext(file_name)
+#         if file_ext == ".txt":
+#             src = source_folder + "\" + file_name + file_ext
+#             print(src)
+#             dest_folder = f'{source_folder} + "\" + documents' + "\" + {file_name} + {file_ext}'
+#             print(dest_folder)
+#             shutil.move(src, dest_folder)
+            # print(file_name)
+
+        # if file_name = re.file_name(r'.\.txt')
+
+os.chdir('D:/Python/Bałagan')
+if not os.path.exists('pictures'):
+    os.mkdir('pictures')
+if not os.path.exists('movies'):
+    os.mkdir('movies')
+if not os.path.exists('documents'):
+    os.mkdir('documents')
+if not os.path.exists('music'):
+    os.mkdir('music')
+if not os.path.exists('archives'):
+    os.mkdir('archives')
+if not os.path.exists('others'):
+    os.mkdir('others')
+
+source_folder = os.getcwd()
+
+for file_name in os.listdir(source_folder):
+    # construct full file path
+    source = f'{source_folder}/{file_name}'
+ 
+    # move only files
+    if os.path.isfile(source):
+        file_name, file_ext = os.path.splitext(file_name)
+        if file_ext == ".txt" or file_ext == ".doc" or file_ext == ".docx" or file_ext == ".pdf" or file_ext == ".xlsx" or file_ext == ".pptx":
+            destination = f'{source_folder}/documents'
+            shutil.move(source, destination)
+            print(f'Destination: {destination}')
+        elif file_ext == ".jpeg" or file_ext == ".png" or file_ext == ".jpg" or file_ext == ".svg":
+            destination = f'{source_folder}/pictures'
+            shutil.move(source, destination)
+        elif file_ext == ".avi" or file_ext == ".mp4" or file_ext == ".mov" or file_ext == ".mkv":
+            destination = f'{source_folder}/movies'
+            shutil.move(source, destination)
+        elif file_ext == ".mp3" or file_ext == ".ogg" or file_ext == ".wav" or file_ext == ".amr":
+            destination = f'{source_folder}/music'
+            shutil.move(source, destination)
+        elif file_ext == ".zip" or file_ext == ".gz" or file_ext == ".tar":
+            destination = f'{source_folder}/archives'
+            shutil.move(source, destination)
+        else:
+            destination = f'{source_folder}/others'
+            shutil.move(source, destination)
+
+
+
+
+
+# if __name__ == '__main__':
+# file_list_creator(os.getcwd())

@@ -1,0 +1,18 @@
+def is_valid_pin_codes(pin_codes):
+    compare = []
+    empty = []
+    if pin_codes == empty:
+        return False
+    for pin in pin_codes:
+        if len(pin) != 4 or len(pin_codes) != len(set(pin_codes)) or not pin.isdigit():
+            return False
+
+    return True
+    
+        
+            
+        
+            
+        
+            
+    

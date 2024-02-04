@@ -1,0 +1,16 @@
+base_rate = 40
+price_per_km = 10
+total_trip = 0
+
+
+def calculate_trip_price(distance_km):
+    global total_trip
+    total_trip += 1
+    result = base_rate + price_per_km * float(distance_km)
+    print(result)
+    return result
+
+calculate_trip_price(10)
+print(total_trip)
+calculate_trip_price(20)
+print(total_trip)

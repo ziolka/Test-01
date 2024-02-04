@@ -1,0 +1,22 @@
+def game(terra, power):
+    total_power = power
+    print(f'Input parameters: {terra}, {power}')
+    for level in terra:
+        for enemy in level:
+            if enemy <= total_power:
+                total_power += enemy
+            else:
+                break
+
+    return total_power
+
+print(game([[1, 2, 5, 10], [2, 10, 2], [1, 3, 1]], 1))
+    
+            
+    
+        
+            
+                
+            
+                
+    

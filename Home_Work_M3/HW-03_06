@@ -1,0 +1,9 @@
+def format_string(string, length):
+    if len(string) >= length:
+        string = string
+        return string
+    else:
+        string = str(" " * int((length - len(string)) // 2) + string)
+        return string
+print(format_string('abdefg', 20))    
+print(format_string('abcdefghijkl', 10))

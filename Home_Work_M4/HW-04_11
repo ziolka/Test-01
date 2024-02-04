@@ -1,0 +1,36 @@
+def is_valid_password(password):
+    upper = False
+    lower = False
+    digit = False
+
+    for i in password:
+        if i.isupper():
+            upper = True
+
+    for j in password:
+        if j.islower():
+            lower = True
+
+    for k in password:
+        if k.isdigit():
+            digit = True
+
+
+    if len(password) >= 8 and upper and lower and digit:
+        return True
+    else:
+        return False
+    
+print(is_valid_password('1234qwer')) 
+print(is_valid_password('Abcd1234'))
+    
+    
+        
+            
+        
+            
+        
+            
+    
+        
+    

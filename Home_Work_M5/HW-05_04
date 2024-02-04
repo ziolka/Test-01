@@ -1,0 +1,16 @@
+def is_check_name(fullname, first_name):
+    print(f'Full: {fullname}')
+    print(f'First: {first_name}')
+    check_result = None
+    check = fullname.find(first_name, 0)
+    print(f'Check: {check}')
+    if check >= 0:
+        check_result = True
+    else:
+        check_result = False
+    print(f'Result is: {check_result}')
+
+    return check_result
+
+# f = is_check_name('Alex Old', 'Alex')
+# print(f)

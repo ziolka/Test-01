@@ -1,0 +1,13 @@
+def prepare_data(data):
+    maximum = max(data)
+    print(maximum)
+    minimum = min(data)
+    print(minimum)
+    data.sort()
+    print(data)
+    data.remove(minimum)
+    data.remove(maximum)
+    print(data)
+    return data
+
+print(prepare_data([10, 20, 30, 40]))

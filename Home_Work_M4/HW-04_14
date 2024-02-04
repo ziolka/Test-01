@@ -1,0 +1,12 @@
+import sys
+
+
+def parse_args():
+    result = ""
+    for arg in sys.argv:
+        result = result + arg + ' '
+        print(result)
+    result = result[8:-1]
+    print(result)
+        
+    return result

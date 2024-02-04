@@ -1,0 +1,19 @@
+def factorial(n):
+    if n < 2:
+            return 1
+    else:
+        return n * factorial(n - 1)
+
+# n = int(input('Enter an integer positive number: '))
+# result = factorial(n)
+# print(f"Silnia z liczby '{n}' wynosi: {result}")
+
+def number_of_groups(n, k):
+    combination = int(factorial(n) / (factorial(n - k) * factorial(k)))
+    return combination
+    
+print(number_of_groups(7, 50))
+    
+    
+    
+    

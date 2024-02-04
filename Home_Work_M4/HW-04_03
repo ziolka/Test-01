@@ -1,0 +1,13 @@
+def format_ingredients(items):
+    formated_text = []
+    if len(items) == 0:
+        formated_text = ''
+    elif len(items) == 1:
+        formated_text = items[0]
+    else:
+        formated_text = ', '.join(items[:-1]) + ' and ' + items[-1]
+    return formated_text
+
+print(format_ingredients(''))
+print(format_ingredients(['milk']))
+print(format_ingredients(['2 eggs','1 cup of milk', '1 tsp sugar']))

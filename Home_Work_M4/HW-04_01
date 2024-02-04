@@ -1,0 +1,10 @@
+def amount_payment(payment):
+    total_sum = 0
+    for value in payment:
+        if value > 0:
+            total_sum = total_sum + value
+    return total_sum
+
+print(amount_payment([10, 20, -5, 30, 20]))
+
+    
