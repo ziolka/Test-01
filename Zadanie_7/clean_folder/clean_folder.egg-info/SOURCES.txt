@@ -1,0 +1,14 @@
+setup.py
+clean_folder/create_folder_structure.py
+clean_folder/create_lists.py
+clean_folder/normalize_name.py
+clean_folder/remove_empty_folders.py
+clean_folder/rename_files.py
+clean_folder/sort.py
+clean_folder/sort_files.py
+clean_folder/unpack_archives.py
+clean_folder.egg-info/PKG-INFO
+clean_folder.egg-info/SOURCES.txt
+clean_folder.egg-info/dependency_links.txt
+clean_folder.egg-info/entry_points.txt
+clean_folder.egg-info/top_level.txt

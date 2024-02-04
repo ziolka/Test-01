@@ -1,0 +1,22 @@
+def to_indexed(source_file, output_file):
+    out_txt = ""
+    index = 0
+    with open(source_file, 'r') as f1:
+        while True:
+            source_line = f1.readline()
+            if not source_line:
+                break
+            print(source_line)
+            out_line = f'{index}: {source_line}'
+            out_txt = out_txt + out_line
+            index +=1
+    with open (output_file, 'w') as f2:
+        f2.write(out_txt)
+    
+        
+    
+    
+        
+    
+        
+            

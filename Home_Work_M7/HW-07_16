@@ -1,0 +1,21 @@
+def decode(data, result=None):
+    if result is None:
+        result = []
+    
+    if (len(data)) == 0:
+        result = data
+    
+    for i in data:
+        value = data.pop(0)
+        times = data.pop(0)
+        print(value)
+        print(times)
+        for j in range(0, times):
+            result.append(value)
+            print(result)
+        if len(data) == 0:
+            return result
+        else:
+            decode(data, result)
+
+    return result

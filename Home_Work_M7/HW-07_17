@@ -1,0 +1,37 @@
+def encode(data, result=None):
+    print(data)
+    if result == None:
+        result = []
+    if len(data)  == 0:
+        return []
+
+    if type(data) == str:
+        print("---")
+        temp = []
+        for i in data:
+            temp.append(i)
+        print(temp)
+    else:
+        temp = data.copy()
+        print(temp)
+
+    letter = temp[0]
+    temp.pop(0)
+    print(letter)
+    result.append(letter)
+    times = 1
+    for i in temp:
+        if temp[0] == letter:
+            times +=1
+            temp.pop(0)
+            
+    result.append(times)
+
+    if len(temp) == 0:
+        return result
+    else:
+        encode(temp, result)
+        
+    print(f'Result is: {result}')
+    
+    return result    
