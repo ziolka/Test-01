@@ -1,4 +1,4 @@
-# Command handlers
+""""Home Work 9 - personal bot"""
 
 TERMINATE = ("good_bye", "exit", ".")
 contacts = {}
@@ -34,7 +34,7 @@ command_handlers = {
     ".": good_bye
 }
 
-# Decorator  
+""" Decorator """  
 def input_error(command_parser):
     def inner(command):
         try:
@@ -44,7 +44,7 @@ def input_error(command_parser):
         return result
     return inner
 
-# Task parser
+""" Task parser """
 @input_error
 def command_parser(command):
     command_parts = command.split(" ")
@@ -54,7 +54,7 @@ def command_parser(command):
     else:
         return command_parts[0], command_parts[1:]
     
-# Request-Answer loop
+""" Request-Answer loop """
 def main():
     while True:
         command = input(">>>: ")
@@ -70,12 +70,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-#     print(hello())
-#     add_contact('Zenek', 12345678900)
-#     add_contact('UFO')
-#     add_contact('Anna', 44256788999)
-#     print(show_all())
-#     change_contact("UFO", 99888777666)
-#     print(show_all())
-#     print(get_phone_number('UFO'))
-#     print(good_bye())

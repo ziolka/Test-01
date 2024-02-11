@@ -1,21 +1,41 @@
-class ListedValuesDict:
-    def __init__(self):
-        self.data = {}
+class Point:
+    def __init__(self, x, y):
+        self.__x = None
+        self.__y = None
+        self.x = x
+        self.y = y
 
-    def __setitem__(self, key, value):
-        if key in self.data:
-            self.data[key].append(value)
-        else:
-            self.data[key] = [value]
+    @property
+    def x(self):
+        return self.__x
 
-    def __getitem__(self, key):
-        result = str(self.data[key][0])
-        for value in self.data[key][1:]:
-            result += ", " + str(value)
-        return result
+    @x.setter
+    def x(self, x):
+        if (type(x) == int) or (type(x) == float):
+            self.__x = x
 
+    @property
+    def y(self):
+        return self.__y
 
-l_dict = ListedValuesDict()
-l_dict[1] = 'a'
-l_dict[1] = 'b'
-print(l_dict[1])  # a, b
+    @y.setter
+    def y(self, y):
+        if (type(y) == int) or (type(y) == float):
+            self.__y = y
+
+class Vector:
+    def __init__(self, coordinates: Point):
+        self.coordinates = coordinates
+
+    def __setitem__(self, index, value):
+        if index == 0:
+            self.coordinates.x = value
+        if index == 1:
+            self.coordinates.y = value       
+            
+
+    def __getitem__(self, index):
+        if index == 0:
+            return self.coordinates.x
+        if index == 1:
+            return self.coordinates.y
